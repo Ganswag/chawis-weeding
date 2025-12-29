@@ -1,0 +1,149 @@
+{% extends "index.html" %}
+
+{% block title %} Inicio {% endblock %}
+
+{% load static %}
+
+{% block extra_styles %}
+{% endblock %}
+
+
+{% block content %}
+
+    <article>
+      <header class="hero-reveal-header">
+        <div class="hero-reveal-split" style="margin: auto;">
+          <div class="hero-reveal-split-item">
+            <h1 class="c-wide-text -split">Isaura y Zaid</h1>
+          </div>
+          <div class="hero-reveal-split-item" aria-hidden="true">
+            <h1 class="c-wide-text -split" aria-hidden="true">Isaura y Zaid</h1>
+          </div>
+        </div>
+      </header>
+      <div class="hero-reveal-content">
+        <div id="content">
+          <section class="section-three">
+      <div class="container-two container">
+              <div class="title-top">
+                  <p>Nuestra boda</p>
+              </div>
+              <svg class="content__img" width="1000" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 450">
+                <defs>
+                      <filter id="sandy2">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise"></feTurbulence>
+                          <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="124" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                          <feMorphology operator="dilate" radius="2" result="morph" in="displacement"></feMorphology>
+                      </filter>
+                      <mask id="circleMask2">
+                        <circle cx="50%" cy="50%" r="0" fill="white" class="dmslt2" data-value-final="1000" />
+                      </mask>
+                    </defs>
+                    <image href="{% static 'images/portada_1.jpg'%}" width="1000" mask="url(#circleMask2)" style="translate: none;rotate: none;scale: none;transform-origin: 0px 0px;filter: brightness(120%);" />
+                  </svg>
+                  <div class="text-bottom-left is-2 subtitle has-text-white-ter quote">
+            “Cuando se quiere a una persona,<br>
+            hay que confiar en ella. No hay<br>
+            otra forma. Tienes que darle la<br>
+            llave de todo lo que posees, si no,<br>
+            ¿de qué sirve tu amor?”<br>
+              </div>
+              <div class="text-bottom-right is-4 title">
+                <p>CASINO.<br> Martin Scorsese</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+  <section class="section is-large has-text-centered container quote parallax" style="background-image: url({% static 'images/portada_2.jpg'%});">
+      <h2 class="subtitle is-2">Nosotros</h2>
+      <h1 class="title is-1">Isaura y <br> Zaid</h1>
+      <h3 class="subtitle is-3">Tenemos el placer de invitarte a nuestra boda, que se celebrará el</h3>
+    <h2 class="subtitle is-2">Sábado 13 de Junio de 2026</h2>
+    <button class="button is-primary is-large">Guardar</button>
+  </section>
+
+    <section class="section is-large has-text-centered has-background-white-ter quote">
+      <h2 class="subtitle is-2 has-text-black-bis">En compañia de</h2>
+      <h1 class="subtitle is-1 has-text-black-bis">nuestros padres</h1>
+      <div class="fixed-grid">
+        <div class="grid">
+          <div class="has-6-cols">
+            <h1 class="subtitle is-1 has-text-black-bis">Soraya Márquez</h1>
+            <h1 class="subtitle is-1 has-text-black-bis">Isaura Elías †</h1>
+          </div>
+          <div class="has-6-cols"></div>
+          <div class="has-6-cols"></div>
+          <div class="has-6-cols">
+            <h1 class="subtitle is-1 has-text-black-bis">Esperanza Villegas</h1>
+            <h1 class="subtitle is-1 has-text-black-bis">Efren Mata</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="section is-large has-text-centered quote">
+      <h2 class="subtitle is-2">Esta a punto de llegar</h2>
+      <h2 class="subtitle is-2">nuestro GRAN día</h2>
+      <h1 class="title is-1">181 : 07 : 54: 40</h1>
+      <h5>Dias Horas Minutos Segundos</h1>
+      </section>
+
+  
+    <section class="section is-large has-text-centered has-background-primary-100 quote">
+      <h2 class="subtitle is-2 has-text-black-bis">Código de vestimenta</h2>
+      <h4 class="subtitle is-4 has-text-black-bis">Nos encantará verte radiante,<br>por lo que te dejamos como<br>nos gustará verte ese día:</h4>
+      <h3 class="subtitle is-3 has-text-black-bis">Etiqueta formal<br> Traje con Corbata<br>Vestido Elegante</h3>
+      <h3 class="subtitle is-3 has-text-black-bis">Colores <strong class="has-text-black"> Negros u Obscuros</strong></h3>
+    </section>
+
+    <section class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
+      <h1 class="subtitle is-1 has-text-white-ter">¿No sabes qué regalarnos?</h1>
+      <h2 class="subtitle is-2 has-text-white-ter">El obsequio no es obligatorio, tu presencia sí, pero si te gustaría aportar con algo para nuestro hogar, te deamos algunas sugerencias debajo:</h2>
+      <table></table>
+    </section>
+
+    </article>
+
+    <!-- End Hero Section 
+
+
+
+    <section class="section is-large has-text-centered">
+      <h2 class="subtitle">Agregar timeline vertical</h2>
+      <h1 class="title">Con ubicaciones</h1>
+    </section>
+  
+    <section class="section is-large has-text-centered has-background-primary-100">
+      <h2 class="subtitle is-2 has-text-black-bis">Código de vestimenta</h2>
+      <h4 class="subtitle is-4 has-text-black-bis">Nos encantará verte radiante,<br>por lo que te dejamos como<br>nos gustará verte ese día:</h4>
+      <h3 class="subtitle is-3 has-text-black-bis">Etiqueta formal<br> Traje con Corbata<br>Vestido Elegante</h3>
+      <h3 class="subtitle is-3 has-text-black-bis">Colores <strong class="has-text-black"> Negros u Obscuros</strong></h3>
+    </section>
+
+    <section class="section is-large has-text-centered" style="background-color: rgb(184, 82, 54);">
+      <h1 class="subtitle is-1 has-text-white-ter">¿No sabes qué regalarnos?</h1>
+      <h2 class="subtitle is-2 has-text-white-ter">El obsequio no es obligatorio, tu presencia sí, pero si te gustaría aportar con algo para nuestro hogar, te deamos algunas sugerencias debajo:</h2>
+      <table></table>
+    </section>
+
+    <section class="section is-large has-text-centered">
+      <h1 class="subtitle is-1 has-text-white-ter">Espacio para fotos</h1>
+      <h2 class="subtitle is-2 has-text-white-ter">galería y más galería</h2>
+      <table></table>
+    </section>
+
+    <section class="section is-large has-text-centered" style="background-color: rgb(184, 82, 54);">
+      <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
+      <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
+      <h3 class="subtitle is-3 has-text-white-ter">Invitación hasta para</h3>
+      <h1 class="subtitle is-1 has-text-white-ter">#</h1>
+      <h2 class="subtitle is-2 has-text-white-ter">adultos</h2>
+      <h3 class="subtitle is-3 has-text-white-ter">Completa y envía el siguiente formulario</h3>
+    </section>
+-->
+  {% endblock %}
+  
+  {% block extra_scripts %}
+  {% endblock %}

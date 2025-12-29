@@ -1,0 +1,12 @@
+celery[redis]>=5.4.2
+Django>=6
+djangorestframework>=3.11.1
+djangorestframework-jwt>=1.11.0
+django-bootstrap4>=2.2.0
+django-ckeditor>=6.7.3
+django-compressor>=2.4
+django-compressor-toolkit>=0.6.0
+django-redis>=6.0.0
+dnspython>=1.16.0
+gunicorn>=23.0.0
+Pillow>=12.0.0
