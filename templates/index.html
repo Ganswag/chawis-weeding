@@ -31,6 +31,7 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- //Needed CDN scripts -->
 
@@ -241,7 +242,7 @@
     {% compress js %}
     <script>
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, ScrollToPlugin); 
 
 ScrollSmoother.create({
   smooth: 1,
@@ -382,29 +383,45 @@ function setupSplits() {
   });
 }
 
-gsap.to(".parallax-bg", {
-  scrollTrigger: {
-    scrub: 1
-  }, 
-  y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-  ease: "none"
-});
-
 setupSplits();
-    // const { createApp, ref } = Vue
 
-    //   createApp({
-    //     setup() {
-    //       const message = ref('Hello vue!')
-    //       return {
-    //         message
-    //       }
-    //     }
-    //   }).mount('#app')
+    document.getElementById("top-button").addEventListener(
+      "click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#top", offsetY:-120}})
+    });
+
+    document.getElementById("locations-button").addEventListener(
+      "click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#locations", offsetY:120}})
+    });
+
+    document.getElementById("code-button").addEventListener(
+      "click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#code", offsetY:120}})
+    });
+    document.getElementById("gifts-button").addEventListener(
+      "click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#gifts", offsetY:120}})
+    });
+    document.getElementById("confirm-button").addEventListener(
+      "click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#confirm", offsetY:120}})
+    });
     </script>
 
 
 <script>
+  
+  
+
+function goToGifts() {
+  document.getElementById("regalos").scrollIntoView({behavior: 'smooth'});
+}
+
+function goToConfirm() {
+  document.getElementById("confirm").scrollIntoView({behavior: 'smooth'});
+}
+
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 13, 2026 16:00:00").getTime();
 

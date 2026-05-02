@@ -21,9 +21,9 @@
           </div>
         </div>
       </header>
-      <div class="hero-reveal-content">
-        <div id="content">
-          <section class="section-three">
+      <div id="top" class="hero-reveal-content">
+      <div id="content">
+      <section class="section-three">
       <div class="container-two container">
               <div class="title-top">
                   <p>Nuestra boda</p>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-    <section class="section is-large has-text-centered">
+    <section id="locations" class="section is-large has-text-centered">
       <h1 class="title is-1">Ubicaciones</h1>
       <h2 class="subtitle is-2">Por acá te esperamos:</h2>
       <div class="card">
@@ -125,40 +125,36 @@
     </section>
 
   
-    <section class="section is-large has-text-centered has-background-primary-100 quote">
+    <section id="code" class="section is-large has-text-centered has-background-primary-100 quote">
       <h2 class="subtitle is-2 has-text-black-bis">Código de vestimenta</h2>
       <h4 class="subtitle is-4 has-text-black-bis">Nos encantará verte radiante,<br>por lo que te dejamos como<br>nos gustará verte ese día:</h4>
       <h3 class="subtitle is-3 has-text-black-bis">Etiqueta formal<br> Traje con Corbata<br>Vestido Elegante</h3>
       <h3 class="subtitle is-3 has-text-black-bis">Colores <strong class="has-text-black"> Negros u Obscuros</strong></h3>
     </section>
     
+    <section id="confirm" class="section is-large has-text-centered">
     {% if guest and guest.total_guests == 1 %}
-    <section class="section is-large has-text-centered">
       <h2 class="subtitle is-2 has-text-white-ter">Queride {{guest.guest_name}}</h2>
       <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
       <h3 class="subtitle is-3 has-text-white-ter">Invitación personal</h3>
       <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
 
       <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
-    </section>
 
     {% elif guest and guest.total_guests > 1 %}
-    <section class="section is-large has-text-centered">
       <h2 class="subtitle is-2 has-text-white-ter">Querides {{guest.guest_name}} y {{guest.companion_name}}</h2>
       <h3 class="subtitle is-3 has-text-white-ter">Su invitación es válida hasta para</h3>
       <h1 class="subtitle is-1 has-text-white-ter">{{guest.total_guests}} adultos</h1>
       <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
       <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
-    </section>
 
     {% else %}
-    <section class="section is-large has-text-centered">
       <h2 class="subtitle is-2 has-text-white-ter">Invitación NO válida</h2>
       <h3 class="subtitle is-3 has-text-white-ter">Contacta a los organizadores para obtener más detalles</h3>
-    </section>
     {% endif %}
+    </section>  
 
-    <section class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
+    <section id="gifts" class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
       <h1 class="subtitle is-1 has-text-white-ter">¿No sabes qué regalarnos?</h1>
       <h2 class="subtitle is-2 has-text-white-ter">El obsequio no es obligatorio, tu presencia sí, pero si te gustaría aportar con algo para nuestro hogar, te dejamos algunas sugerencias debajo:</h2>
       
