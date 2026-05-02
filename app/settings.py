@@ -28,6 +28,9 @@ DB_NAME = config.get(ENV, 'db_name')
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
+    'http://0.0.0.0:8000',
+    'http://localhost:8000',
+
 ]
 
 ALLOWED_HOSTS = [f.strip() for f in config.get(ENV, 'host').split(',')]
@@ -171,7 +174,7 @@ COMPRESS_PRECOMPILERS = (
     ('css', 'compressor_toolkit.precompilers.SCSSCompiler'),
 )
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False  # TODO: True
 COMPRESS_OFFLINE = True if ENV == 'production' else False
 
 # Redis Stuff:

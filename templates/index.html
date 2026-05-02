@@ -2,6 +2,7 @@
 <html lang="es">
 
     <head>
+        <!-- https://nuestrabodaisaurayeli.my.canva.site/ -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
 
         <!-- // Global site tag (gtag.js) - Google Analytics -->
@@ -65,16 +66,6 @@
         overflow-x: hidden;
         font-family: Washington;
       }
-      .parallax {
-        /* Set a specific height */
-        min-height: 100vh; 
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
 
       .hero-reveal {
         background-color: var(--color-black);
@@ -105,7 +96,7 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
-        width: 100%;
+        width: 100vw;
       }
 
       .hero-reveal-split-item {
@@ -224,10 +215,11 @@
     }
 }
 
-
-.rose-text {
-    color: rgb(184, 82, 54) !important;
-  filter: drop-shadow(0px 0px 1px #bd487e);
+#date-declaration {
+  background: url("{% static 'images/portada_2.jpg'%}");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
       </style>
@@ -324,25 +316,6 @@ heroReveal.forEach((element) => {
   );
 });
 
-// Alice animation
-function parallaxScrollBySpeed(selector, speed = 1, trigger = ".hero-reveal") {
-  const el = document.querySelector(selector);
-  const contentEl = document.querySelector(".hero-reveal-content");
-  const contentHeight = contentEl.offsetHeight;
-
-  if (!el) return;
-
-  gsap.to(el, {
-    yPercent: (speed - 1) * 100,
-    ease: "none",
-    scrollTrigger: {
-      trigger,
-      start: "top top",
-      end: `+=${contentHeight * 3}`,
-      scrub: true
-    }
-  });
-}
 
 gsap.to(".dmslt2", {
     scrollTrigger: {
@@ -382,19 +355,6 @@ gsap.to(".text-bottom-right", {
     top: 0
 });
 
-let scrollText = document.querySelector(".scroll-text");
-
-gsap.to(scrollText, {
-    duration: 1,
-    repeat: -1,
-    yoyo: true,
-    repeatDelay: 2,
-    text: {
-        value: "Slowly",
-        newClass: "rose-text"
-    }
-});
-
 const quotes = document.querySelectorAll(".quote");
 
 function setupSplits() {
@@ -422,8 +382,15 @@ function setupSplits() {
   });
 }
 
-setupSplits();
+gsap.to(".parallax-bg", {
+  scrollTrigger: {
+    scrub: 1
+  }, 
+  y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+  ease: "none"
+});
 
+setupSplits();
     // const { createApp, ref } = Vue
 
     //   createApp({
@@ -435,7 +402,40 @@ setupSplits();
     //     }
     //   }).mount('#app')
     </script>
-      {% block extra_scripts %}{% endblock %}
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 13, 2026 16:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("reverse-counter").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+      {% block extra_scripts %}
+    {% endblock %}
     {% endcompress %}
 
 </html>
