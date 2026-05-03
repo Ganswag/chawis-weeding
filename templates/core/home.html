@@ -10,177 +10,181 @@
 
 {% block content %}
 
-    <article>
-      <header class="hero-reveal-header">
-        <div class="hero-reveal-split" style="margin: auto;">
-          <div class="hero-reveal-split-item">
-            <h1 class="c-wide-text -split">Isaura y Zaid</h1>
-          </div>
-          <div class="hero-reveal-split-item" aria-hidden="true">
-            <h1 class="c-wide-text -split" aria-hidden="true">Isaura y Zaid</h1>
-          </div>
+  <article>
+    <header class="hero-reveal-header">
+      <div class="hero-reveal-split" style="margin: auto;">
+        <div class="hero-reveal-split-item">
+          <h1 class="c-wide-text -split">Isaura y Zaid</h1>
         </div>
-      </header>
-      <div id="top" class="hero-reveal-content">
+        <div class="hero-reveal-split-item" aria-hidden="true">
+          <h1 class="c-wide-text -split" aria-hidden="true">Isaura y Zaid</h1>
+        </div>
+      </div>
+    </header>
+    <div id="top" class="hero-reveal-content">
       <div id="content">
-      <section class="section-three">
-      <div class="container-two container">
-              <div class="title-top">
-                  <p>Nuestra boda</p>
-              </div>
-              <svg class="content__img" width="1000" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 450">
-                <defs>
-                      <filter id="sandy2">
-                          <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise"></feTurbulence>
-                          <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="124" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-                          <feMorphology operator="dilate" radius="2" result="morph" in="displacement"></feMorphology>
-                      </filter>
-                      <mask id="circleMask2">
-                        <circle cx="50%" cy="50%" r="0" fill="white" class="dmslt2" data-value-final="1000" />
-                      </mask>
-                    </defs>
-                    <image href="{% static 'images/portada_1.jpg'%}" width="1000" mask="url(#circleMask2)" style="translate: none;rotate: none;scale: none;transform-origin: 0px 0px;filter: brightness(120%);" />
-                  </svg>
-                  <div class="text-bottom-left is-2 subtitle has-text-white-ter quote">
-            “Cuando se quiere a una persona,
-            hay que confiar en ella. No hay
-            otra forma. Tienes que darle la
-            llave de todo lo que posees, si no,
-            ¿de qué sirve tu amor?”
-              </div>
-              <div class="text-bottom-right is-4 title">
-                <p>CASINO.<br> Martin Scorsese</p>
-              </div>
+        <section class="section-three">
+          <div class="container-two container">
+            <div class="title-top">
+                <p>Nuestra boda</p>
             </div>
-          </section>
-        </div>
+            <svg class="content__img" width="1000" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 450">
+              <defs>
+                <filter id="sandy2">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise"></feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="124" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                  <feMorphology operator="dilate" radius="2" result="morph" in="displacement"></feMorphology>
+                </filter>
+                <mask id="circleMask2">
+                  <circle cx="50%" cy="50%" r="0" fill="white" class="dmslt2" data-value-final="1000" />
+                </mask>
+              </defs>
+              <image href="{% static 'images/portada_1.jpg'%}" width="1000" mask="url(#circleMask2)" style="translate: none;rotate: none;scale: none;transform-origin: 0px 0px;filter: brightness(120%);" />
+            </svg>
+            <div class="text-bottom-left is-2 subtitle has-text-white-ter">
+              CASINO
+            </div>
+            <div class="text-bottom-right is-4 title">
+              Martin Scorsese
+            </div>
+            <div class="is-2 subtitle has-text-white-ter quote">
+              “Cuando se quiere a una persona,
+              hay que confiar en ella. No hay
+              otra forma. Tienes que darle la
+              llave de todo lo que posees, si no,
+              ¿de qué sirve tu amor?”
+            </div>
+          </div>
+        </section>
       </div>
-
-  <section id="date-declaration" class="section is-large has-text-centered container quote">
-      <h2 class="subtitle is-2">Nosotros</h2>
-      <h1 class="title is-1">Isaura y <br> Zaid</h1>
-      <h3 class="subtitle is-3">Tenemos el placer de invitarte a nuestra boda, que se celebrará el</h3>
-      <h2 class="subtitle is-2">Sábado 13 de Junio de 2026</h2>
-      <button class="button is-primary is-large">Guardar</button>
     </div>
-  </section>
 
+    <section id="date-declaration" class="section is-large has-text-centered container">
+      <div class="quote">
+        <h2 class="subtitle is-2">Nosotros</h2>
+        <h1 class="title is-1">Isaura y <br> Zaid</h1>
+        <h3 class="subtitle is-3">Tenemos el placer de invitarte a nuestra boda, que se celebrará el</h3>
+        <h2 class="subtitle is-2">Sábado 13 de Junio de 2026</h2>
+        <button class="button is-primary is-large">Guardar</button>
+      </div>
+    </section>
+  
     <section class="section is-large has-text-centered has-background-white-ter quote">
-      <h2 class="subtitle is-2 has-text-black-bis">En compañia de</h2>
-      <h1 class="subtitle is-1 has-text-black-bis">nuestros padres</h1>
-      <div class="fixed-grid">
-        <div class="grid">
-          <div class="has-6-cols">
-            <h1 class="subtitle is-1 has-text-black-bis">Soraya Márquez</h1>
-            <h1 class="subtitle is-1 has-text-black-bis">Isaura Elías †</h1>
-          </div>
-          <div class="has-6-cols"></div>
-          <div class="has-6-cols"></div>
-          <div class="has-6-cols">
-            <h1 class="subtitle is-1 has-text-black-bis">Esperanza Villegas</h1>
-            <h1 class="subtitle is-1 has-text-black-bis">Efren Mata</h1>
+      <div class="">
+        <h2 class="subtitle is-2 has-text-black-bis">En compañia de</h2>
+        <h1 class="subtitle is-1 has-text-black-bis">nuestros padres</h1>
+        <div class="fixed-grid">
+          <div class="grid">
+            <div class="has-6-cols">
+              <h1 class="subtitle is-1 has-text-black-bis">Soraya Márquez</h1>
+              <h1 class="subtitle is-1 has-text-black-bis">Isaura Elías †</h1>
+            </div>
+            <div class="has-6-cols"></div>
+            <div class="has-6-cols"></div>
+            <div class="has-6-cols">
+              <h1 class="subtitle is-1 has-text-black-bis">Esperanza Villegas</h1>
+              <h1 class="subtitle is-1 has-text-black-bis">Efren Mata</h1>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="locations" class="section is-large has-text-centered">
-      <h1 class="title is-1">Ubicaciones</h1>
-      <h2 class="subtitle is-2">Por acá te esperamos:</h2>
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title is-2 title">Ceremonia religiosa:<br> Santuario de Nuestra Señora de Guadalupe</p>
-        </header>
-        <div class="card-content">
-          <div class="content subtitle"> C. Guadalupe 213, Barrio de Guadalupe, 20059 Aguascalientes, Ags.
-          </div>
-        </div>
-        <footer class="card-footer">
-          <div class="card-footer-item subtitle" >
-            <time datetime="2016-1-1">6:00 PM</time>
-          </div>
-        </footer>
-      </div>
-      
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title is-2 title">Recepción:<br> Jardín “La Pica”</p>
-        </header>
-        <div class="card-content">
-          <div class="content subtitle"> 20326 Aguascalientes, Ags.
-          </div>
-        </div>
-        <footer class="card-footer">
-          <div class="card-footer-item subtitle" >
-            <time datetime="2016-1-1">8:00 PM</time>
-          </div>
-        </footer>
-      </div>
-    </section>
-
-    <section class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
-      <h2 class="subtitle is-2">Esta a punto de llegar</h2>
-      <h2 class="subtitle is-2">nuestro GRAN día</h2>
-      <h1 id="reverse-counter" class="title is-1">calculando</h1>
-    </section>
-
   
-    <section id="code" class="section is-large has-text-centered has-background-primary-100 quote">
-      <h2 class="subtitle is-2 has-text-black-bis">Código de vestimenta</h2>
-      <h4 class="subtitle is-4 has-text-black-bis">Nos encantará verte radiante,<br>por lo que te dejamos como<br>nos gustará verte ese día:</h4>
-      <h3 class="subtitle is-3 has-text-black-bis">Etiqueta formal<br> Traje con Corbata<br>Vestido Elegante</h3>
-      <h3 class="subtitle is-3 has-text-black-bis">Colores <strong class="has-text-black"> Negros u Obscuros</strong></h3>
-    </section>
+      <section id="locations" class="section is-large has-text-centered">
+        <h1 class="title is-1">Ubicaciones</h1>
+        <h2 class="subtitle is-2">Por acá te esperamos:</h2>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title is-2 title">Ceremonia religiosa:<br> Santuario de Nuestra Señora de Guadalupe</p>
+          </header>
+          <div class="card-content">
+            <div class="content subtitle"> C. Guadalupe 213, Barrio de Guadalupe, 20059 Aguascalientes, Ags.
+            </div>
+          </div>
+          <footer class="card-footer">
+            <div class="card-footer-item subtitle" >
+              <time datetime="2016-1-1">6:00 PM</time>
+            </div>
+          </footer>
+        </div>
+        <br>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title is-2 title">Recepción:<br> Jardín “La Pica”</p>
+          </header>
+          <div class="card-content">
+            <div class="content subtitle"> 20326 Aguascalientes, Ags.
+            </div>
+          </div>
+          <footer class="card-footer">
+            <div class="card-footer-item subtitle" >
+              <time datetime="2016-1-1">8:00 PM</time>
+            </div>
+          </footer>
+        </div>
+      </section>
+  
+      <section class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
+        <h2 class="subtitle is-2">Esta a punto de llegar</h2>
+        <h2 class="subtitle is-2">nuestro GRAN día</h2>
+        <h1 id="reverse-counter" class="title is-1">calculando</h1>
+      </section>
+  
     
-    <section id="confirm" class="section is-large has-text-centered">
-    {% if guest and guest.total_guests == 1 %}
-      <h2 class="subtitle is-2 has-text-white-ter">Queride {{guest.guest_name}}</h2>
-      <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
-      <h3 class="subtitle is-3 has-text-white-ter">Invitación personal</h3>
-      <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
-
-      <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
-
-    {% elif guest and guest.total_guests > 1 %}
-      <h2 class="subtitle is-2 has-text-white-ter">Querides {{guest.guest_name}} y {{guest.companion_name}}</h2>
-      <h3 class="subtitle is-3 has-text-white-ter">Su invitación es válida hasta para</h3>
-      <h1 class="subtitle is-1 has-text-white-ter">{{guest.total_guests}} adultos</h1>
-      <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
-      <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
-
-    {% else %}
-      <h2 class="subtitle is-2 has-text-white-ter">Invitación NO válida</h2>
-      <h3 class="subtitle is-3 has-text-white-ter">Contacta a los organizadores para obtener más detalles</h3>
-    {% endif %}
-    </section>  
-
-    <section id="gifts" class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
-      <h1 class="subtitle is-1 has-text-white-ter">¿No sabes qué regalarnos?</h1>
-      <h2 class="subtitle is-2 has-text-white-ter">El obsequio no es obligatorio, tu presencia sí, pero si te gustaría aportar con algo para nuestro hogar, te dejamos algunas sugerencias debajo:</h2>
+      <section id="code" class="section is-large has-text-centered has-background-primary-100 quote">
+        <h2 class="subtitle is-2 has-text-black-bis">Código de vestimenta</h2>
+        <h4 class="subtitle is-4 has-text-black-bis">Nos encantará verte radiante,<br>por lo que te dejamos como<br>nos gustará verte ese día:</h4>
+        <h3 class="subtitle is-3 has-text-black-bis">Etiqueta formal<br> Traje con Corbata<br>Vestido Elegante</h3>
+        <h3 class="subtitle is-3 has-text-black-bis">Colores <strong class="has-text-black"> Negros u Obscuros</strong></h3>
+      </section>
       
-      <div class="grid mt-6">
-        <a class="cell has-text-centered" href="https://www.amazon.com.mx/hz/wishlist/ls/SAKBI8O5CDFI" target="_blank">
-          <figure class="image is-128x128 is-inline-block" style="background-color: white;">
-            <img src="https://static.vecteezy.com/system/resources/previews/014/018/563/non_2x/amazon-logo-on-transparent-background-free-vector.jpg">
-            <!-- <img src="{% static 'images/logos/amazon_logo.webp'%}" /> -->
-          </figure>
-        </a>
-        
-        <a class="cell has-text-centered" href="https://cantia.com.mx/apps/giftregistry/registry/22489" target="_blank">
-          <figure class="image is-128x128 is-inline-block" style="background-color: white;">
-            <img src="{% static 'images/logos/cantia_logo.avif'%}" />
-          </figure>
-        </a>
-
-        <a class="cell has-text-centered" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51905227" target="_blank">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="{% static 'images/logos/liverpool_logo.png'%}" />
-          </figure>
-        </a>
-      </div>
-    </section>
-
+      <section id="confirm" class="section is-large has-text-centered">
+      {% if guest and guest.total_guests == 1 %}
+        <h2 class="subtitle is-2 has-text-white-ter">Queride {{guest.guest_name}}</h2>
+        <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
+        <h3 class="subtitle is-3 has-text-white-ter">Invitación personal</h3>
+        <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
   
+        <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
+  
+      {% elif guest and guest.total_guests > 1 %}
+        <h2 class="subtitle is-2 has-text-white-ter">Querides {{guest.guest_name}} y {{guest.companion_name}}</h2>
+        <h3 class="subtitle is-3 has-text-white-ter">Su invitación es válida hasta para</h3>
+        <h1 class="subtitle is-1 has-text-white-ter">{{guest.total_guests}} adultos</h1>
+        <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
+        <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
+  
+      {% else %}
+        <h2 class="subtitle is-2 has-text-white-ter">Invitación NO válida</h2>
+        <h3 class="subtitle is-3 has-text-white-ter">Contacta a los organizadores para obtener más detalles</h3>
+      {% endif %}
+      </section>  
+  
+      <section id="gifts" class="section is-large has-text-centered quote" style="background-color: rgb(184, 82, 54);">
+        <h1 class="subtitle is-1 has-text-white-ter">¿No sabes qué regalarnos?</h1>
+        <h2 class="subtitle is-2 has-text-white-ter">El obsequio no es obligatorio, tu presencia sí, pero si te gustaría aportar con algo para nuestro hogar, te dejamos algunas sugerencias debajo:</h2>
+        
+        <div class="grid mt-6">
+          <a class="cell has-text-centered" href="https://www.amazon.com.mx/hz/wishlist/ls/SAKBI8O5CDFI" target="_blank">
+            <figure class="image is-128x128 is-inline-block" style="background-color: white;">
+              <img src="https://static.vecteezy.com/system/resources/previews/014/018/563/non_2x/amazon-logo-on-transparent-background-free-vector.jpg">
+              <!-- <img src="{% static 'images/logos/amazon_logo.webp'%}" /> -->
+            </figure>
+          </a>
+          
+          <a class="cell has-text-centered" href="https://cantia.com.mx/apps/giftregistry/registry/22489" target="_blank">
+            <figure class="image is-128x128 is-inline-block" style="background-color: white;">
+              <img src="{% static 'images/logos/cantia_logo.avif'%}" />
+            </figure>
+          </a>
+  
+          <a class="cell has-text-centered" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51905227" target="_blank">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="{% static 'images/logos/liverpool_logo.png'%}" />
+            </figure>
+          </a>
+        </div>
+      </section>
   </article>
 
   
