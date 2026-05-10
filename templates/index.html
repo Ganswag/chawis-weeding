@@ -61,6 +61,10 @@
         font-family: Washington;
       }
 
+    body{
+      font-family: Washington;
+    }
+
     .main {
       max-width: 100vw;
       overflow-x: hidden;
@@ -230,6 +234,7 @@ background-position: center;
 
   </head>
 
+  
   <body class="no-scroll">
     
     <main id="app" role="main" class="main">
@@ -253,6 +258,12 @@ background-position: center;
   
   {% compress js %}
   <script>
+
+closeModal = function() {
+  document.getElementById('bk-music').play();
+  el = document.querySelectorAll('body > div.modal');
+  el[0].classList.remove('is-active')
+}
 
 window.onload = function() {
     console.log("Page fully loaded!");

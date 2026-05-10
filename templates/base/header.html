@@ -1,7 +1,10 @@
 {% load static %}
 
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-
+  <audio id="bk-music" autoplay style="position: fixed;">
+    <source src="{% static 'audio/bk_music.mp3' %}" type="audio/ogg">
+      Your browser does not support the audio element.
+  </audio>
   <div id="navigationBar" class="navbar-menu">
     <div class="navbar-start">
       <a id="top-button" class="navbar-item"> Inicio </a>
@@ -27,3 +30,20 @@
     </div>
   </div>
 </nav>
+
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <h1 class="modal-card-title is-1">Queremos compartir música contigo</h1>
+    </header>
+    <section class="modal-card-body">
+      <p>Al cerrar la ventana comenzará la reproducción</p>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="buttons">
+        <button onclick="closeModal()" class="button is-success">Cerrar</button>
+      </div>
+    </footer>
+  </div>
+</div>
