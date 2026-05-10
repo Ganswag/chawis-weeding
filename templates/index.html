@@ -222,13 +222,28 @@ background-size: cover;
 background-position: center;
 }
 
+.no-scroll {
+   overflow: hidden;
+}
+
     </style>
 
   </head>
 
-  <body>
+  <body class="no-scroll">
+    
     <main id="app" role="main" class="main">
-      <section class="hero-reveal">
+
+      <div id="loader" style="height: 100vh; width: 100vw;">
+        <section class="hero is-large is-info">
+          <div class="hero-body">
+            <p class="title">Cargando</p>
+            <p class="subtitle">Espera un momento</p>
+          </div>
+        </section>
+      </div>
+
+      <section id="main-section" class="hero-reveal">
         {% block content %}{% endblock %}
       </section>
       {% include 'base/footer.html' %}
@@ -238,6 +253,12 @@ background-position: center;
   
   {% compress js %}
   <script>
+
+window.onload = function() {
+    console.log("Page fully loaded!");
+    document.getElementById('loader').remove();
+    document.body.classList.remove('no-scroll');
+};
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, ScrollToPlugin); 
 

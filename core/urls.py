@@ -6,3 +6,5 @@ urlpatterns = [
     path('', views.Home.as_view(), name='home'),
     path('invitaciones/<slug:slug>', views.Home.as_view(), name='invitation')
 ]
+
+handler404 = 'core.views.view_404' 

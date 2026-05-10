@@ -103,7 +103,9 @@
           </div>
           <footer class="card-footer">
             <div class="card-footer-item subtitle" >
-              <time datetime="2016-1-1">6:00 PM</time>
+              <a href="https://maps.app.goo.gl/5E8mS1nuqT18CeJx6" target="_blank">
+                <time datetime="2016-1-1">6:00 PM</time>
+              </a> 
             </div>
           </footer>
         </div>
@@ -118,7 +120,9 @@
           </div>
           <footer class="card-footer">
             <div class="card-footer-item subtitle" >
-              <time datetime="2016-1-1">8:00 PM</time>
+              <a href="https://maps.app.goo.gl/g7vj8t8b1jdw5m7H9" target="_blank">
+                <time datetime="2016-1-1">8:00 PM</time>
+              </a>
             </div>
           </footer>
         </div>
@@ -144,15 +148,14 @@
         <h2 class="subtitle is-2 has-text-white-ter">Confirma tu asistencia</h2>
         <h3 class="subtitle is-3 has-text-white-ter">Invitación personal</h3>
         <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
-  
-        <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
+        <a class="button is-primary is-large" target="_blank" href="https://wa.me/+524495440310/?text=ConfirmarAsistencia">Confirmar</a>
   
       {% elif guest and guest.total_guests > 1 %}
         <h2 class="subtitle is-2 has-text-white-ter">Querides {{guest.guest_name}} y {{guest.companion_name}}</h2>
         <h3 class="subtitle is-3 has-text-white-ter">Su invitación es válida hasta para</h3>
         <h1 class="subtitle is-1 has-text-white-ter">{{guest.total_guests}} adultos</h1>
         <h3 class="subtitle is-3 has-text-white-ter">En la mesa {{guest.table}}</h3>
-        <h3 class="subtitle is-3 has-text-white-ter">Confirmar</h3>
+        <a class="button is-primary is-large" target="_blank" href="https://wa.me/+524495440310/?text=ConfirmarAsistencia">Confirmar</a>
   
       {% else %}
         <h2 class="subtitle is-2 has-text-white-ter">Invitación NO válida</h2>
